@@ -57,6 +57,6 @@ h1.innerHTML = result;  // Reset the h1's content
 }
 
 
-setInterval(fontSwitch, 750);
+setInterval(fontSwitch,50);
 
 
