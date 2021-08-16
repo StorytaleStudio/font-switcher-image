@@ -6,6 +6,7 @@ import {ReactComponent as MakeLogo} from './logo.svg'
 import {ReactComponent as ReactLogo} from './react-logo.svg'
 import './fontSwitch'
 
+
 function App({ headline, subheadline, showLogos, backgroundImage }) {
 
   return (
@@ -17,14 +18,6 @@ function App({ headline, subheadline, showLogos, backgroundImage }) {
       <h1 class="hero">{headline}</h1>
         <h2>{subheadline}</h2> 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-        <script>
-        WebFont.load({
-          google: {
-          families: fonts
-          }
-        });
-        </script>
         <fontSwitch/>
         
     </div>
