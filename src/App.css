@@ -1,3 +1,7 @@
+html {
+  font-size: calc(0.25rem + 6 * ((100vw - 320px) / 680));
+}
+
 *{box-sizing:border-box}
 html,body {
   margin: 0;
@@ -30,12 +34,45 @@ html,body {
 }
 
 h1 {
-  font-size: clamp( 16px, 10vh, 250px);
-  font-weight: 700;
+  font-size: 15rem;
   line-height: 100%;
-  color: #1f2a44;
   text-align: center;
   width: 100%;
   padding: 0 2rem;
   z-index: 1;
+  font-weight: normal;
+margin-top: auto;
+margin-bottom: 0.25rem;
+
+}
+
+
+
+body {
+display: grid;
+grid-template-rows: 50% auto;
+place-items: center;
+height: 100vh;
+background: #010101;
+color: #fefefe;
+}
+
+button {
+padding: 1rem 1.5rem;
+border: 2px solid;
+background: white;
+text-transform: uppercase;
+font-weight: 700;
+letter-spacing: 2px;
+cursor: pointer;
+}
+
+
+h2{
+margin-top: 0.25rem;
+margin-bottom: auto;
+text-align: right;
+width: 30ch;
+font-family: 'Raleway', sans-serif;
+font-size: 3rem;
 }

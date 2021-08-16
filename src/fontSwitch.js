@@ -1,7 +1,7 @@
 import WebFont from "webfontloader";
 
 
-        const fonts = [
+const fonts = [
   'Roboto', 
   'Open Sans', 
   'Raleway', 
@@ -22,7 +22,12 @@ import WebFont from "webfontloader";
   'Coda',
   'Fredericka the Great',
   'Averia Serif Libre',
-  'Nova Round'
+  'Nova Round',
+  'Press Start 2P',
+  'Audiowide',
+  'Lemonada',
+  'Jolly Lodger',
+  'Grandstander'
 ];
 
   WebFont.load({
