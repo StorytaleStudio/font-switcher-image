@@ -4,62 +4,9 @@ import Shapes from './components/shapes/shapes'
 import Logos from './components/logos/logos'
 import {ReactComponent as MakeLogo} from './logo.svg'
 import {ReactComponent as ReactLogo} from './react-logo.svg'
-import  'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'
+import './fontSwitch'
 
-function App({ headline, subheading, showLogos, backgroundImage }) {
-  const fonts = [
-    'Roboto', 
-    'Open Sans', 
-    'Raleway', 
-    'Georama', 
-    'Poppins', 
-    'Josefin Sans', 
-    'Fjalla One', 
-    'Comfortaa', 
-    'Righteous', 
-    'Public Sans', 
-    'Concert One', 
-    'Economica', 
-    'Droid Sans', 
-    'PT Mono', 
-    'Viga',
-    'Cabin Condensed',
-    'Pallette Mosaic',
-    'Coda',
-    'Fredericka the Great',
-    'Averia Serif Libre',
-    'Nova Round'
-  ];
-  
-    WebFont.load({
-      google: {
-        families: fonts
-      }
-    });
-  
-  function fontSwitch(){
-    let h1 = document.querySelector(".hero"); // Get reference to the h1
-  let text = h1.textContent.split("");                 // Get the text content into an array
-  
-  let result = ""; // Will hold output
-  
-    
-  // Loop over the array
-  text.forEach(function(char){
-    
-     var rand = fonts[Math.floor(Math.random() * fonts.length)];
-    // Append a new span only if the current char is not a space
-    result += (char.trim() === "") ? "" : "<span style='font-family:" + rand + ";'>" + char + "</span>";
-  });
-  
-  h1.innerHTML = result;  // Reset the h1's content
-  
-  // console.log(h1.outerHTML); // Test
-  }
-  
-  
-  setInterval(fontSwitch, 750);
-
+function App({ headline, subheadline, showLogos, backgroundImage }) {
 
   return (
     <div className="App" style={{ backgroundImage: `url('${backgroundImage}')` }}>
@@ -68,10 +15,24 @@ function App({ headline, subheading, showLogos, backgroundImage }) {
       )}
 
       <h1 class="hero">{headline}</h1>
-        <h2>{subheading}</h2> 
+        <h2>{subheadline}</h2> 
 
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>
+        WebFont.load({
+          google: {
+          families: fonts
+          }
+        });
+        </script>
+        <fontSwitch/>
+        
     </div>
+
+
+
   );
+  
 }
 
 
