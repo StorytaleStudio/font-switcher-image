@@ -4,6 +4,7 @@ import Shapes from './components/shapes/shapes'
 import Logos from './components/logos/logos'
 import {ReactComponent as MakeLogo} from './logo.svg'
 import {ReactComponent as ReactLogo} from './react-logo.svg'
+import  'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'
 
 function App({ headline, subheading, showLogos, backgroundImage }) {
   const fonts = [
